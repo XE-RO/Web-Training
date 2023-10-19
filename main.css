@@ -118,3 +118,18 @@ button.panel-btn {
     color:var(--second-color);
     background-color: var(--main-modal-color);
 }
+
+/*STAGE & PELOTA*/
+
+.stage{
+    display: flex;
+    min-height: 50vh;
+    background-color: var(--second-color);
+}
+.ball{
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
