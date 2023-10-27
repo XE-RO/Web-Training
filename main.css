@@ -65,6 +65,7 @@ main .section{
     left: 0;
     right: 0;
     width: 100%;
+    overflow-y: auto;
     background-color: var(--second-modal-color);
     transition: .3s ease;
     /*De Arriba*/
@@ -136,6 +137,7 @@ button.panel-btn {
     background-color: var(--main-color);
 }
 
+
 .scroll-top-button{
     position:fixed;
     z-index: 999;
@@ -196,5 +198,34 @@ button.panel-btn {
 
 .offline{
     background-color: #b71c1c;
+}
+
+/*  IMAGENES */ 
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+.card{
+    background-color: var(var(--second-color));
+    color: var(--main-color);
+    transition: all 0.25s ease-out;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+.card figcaption{
+    padding: 1rem;
+}
+
+.filter{
+    /* display: none;*/
+    visibility: hidden;
+    opacity: 0;
+    order: 1;
 }
 

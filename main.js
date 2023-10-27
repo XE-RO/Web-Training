@@ -9,6 +9,9 @@ import responsiveTester from "./prueba_responsive.js";
 import userDeviceInfo from "./deteccion_dispositivos.js";
 import networkStatus from "./deteccion_red.js";
 import webCam from "./deteccion_webcam.js";
+import getGeolocation from "./geolocalizacion.js";
+import searchFilters from "./filtro_busquedas.js";
+import draw from "./sorteo.js";
 
 const d=document
 
@@ -22,7 +25,11 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     responsiveMedia("gmaps","(min-width: 1024px)",`<a href="https://maps.app.goo.gl/81QWNCbZ4mYAnkry6">Ver mapa</a>`,`<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1881.3307860711352!2d-99.16888681116005!3d19.42702312496429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses-419!2smx!4v1698069128209!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`);
     responsiveTester("responsive-tester");
     userDeviceInfo("user-device");
-    webCam("webcam")
+    webCam("webcam");
+    getGeolocation("geolocation");
+    searchFilters(".card-filter",".card");
+    draw("#winner-btn",".player")
+
 })
 
 d.addEventListener("keydown",e=>{
