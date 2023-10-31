@@ -12,6 +12,7 @@ import webCam from "./deteccion_webcam.js";
 import getGeolocation from "./geolocalizacion.js";
 import searchFilters from "./filtro_busquedas.js";
 import draw from "./sorteo.js";
+import slider from "./slider_imgs.js";
 
 const d=document
 
@@ -28,7 +29,8 @@ d.addEventListener("DOMContentLoaded",(e)=>{
     webCam("webcam");
     getGeolocation("geolocation");
     searchFilters(".card-filter",".card");
-    draw("#winner-btn",".player")
+    draw("#winner-btn",".player");
+    slider();
 
 })
 
@@ -36,8 +38,8 @@ d.addEventListener("keydown",e=>{
     shortCuts(e)
     moveBall(e,".ball",".stage")
 })
-darktheme(".dark-mode-btn","dark-mode");
 
+darktheme(".dark-mode-btn","dark-mode");
 networkStatus();
 
 
