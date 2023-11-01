@@ -70,11 +70,11 @@ main .section{
     background-color: var(--second-modal-color);
     transition: .3s ease;
     /*De Arriba*/
-    transform: translate(0,-100%);
+    /*transform: translate(0,-100%); */
     /*De abajo*/
-    transform: translate(0,100%);
+    /* transform: translate(0,100%); */
     /*De izquierda*/
-    transform: translate(-100%,0);
+    /* transform: translate(-100%,0); */
     /*De derecha*/
     transform: translate(100%,0);
 }
@@ -285,5 +285,58 @@ button.panel-btn {
 }
 .slider a:hover{
     color: #faf73fc0;
+}
+
+/********** SCROLL SPY*********/
+
+@media screen and (min-width:1024px){
+    body{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 4rem auto;
+        grid-template-areas: 
+        "header header"
+        "main   panel" ;
+
+    }
+    main{
+        grid-area: main;
+    }
+
+    .header{
+        grid-area: header;
+    }
+    .panel{
+        grid-area: panel;
+        position: sticky;
+        top: 4rem;
+        transform: translate(0,0);
+        opacity: 1;
+        visibility: visible;
+        background-color: var(--second-color);
+        justify-content: flex-start;
+        align-self: start;
+
+    }
+    .panel-btn{
+        display: none;
+    }
+    .menu{
+        justify-content: start;
+        text-align: right;
+        
+    }
+    .menu a{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    .menu a:hover,.menu a.active{
+        color:var(--second-color);
+        background-color: var(--main-color);
+    }
+    .scroll-top-btn{
+        right: initial;
+        left:calc(4.25rem + 1vw);
+    }
 }
 
