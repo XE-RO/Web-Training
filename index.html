@@ -31,7 +31,8 @@
                 <a href="#seccion11" data-scroll-spy>Sorteo digital</a>
                 <a href="#seccion12" data-scroll-spy>responsive Slider</a>
                 <a href="#seccion13" data-scroll-spy>Smart video</a>
-                <a href="#seccion14" data-scroll-spy>Seccion 14</a>
+                <a href="#seccion14" data-scroll-spy>Validaciones de Formulario</a>
+                <a href="#seccion15" data-scroll-spy>Seccion 15</a>
             </nav>
           </aside>
 
@@ -186,7 +187,25 @@
                 
             </section>
             <section id="seccion14" class="section" data-scroll-spy>
-                <h2>seccion 14</h2>
+                <h2>Validaciones de Formulario</h2>
+                <form class="contact-form">
+                    <legend>Envianos tus comentarios</legend>
+                    <input type="text" name="name" placeholder="Escribe tu nombre" title="El nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                    <input type="email" name="email" placeholder="E-mail" title="E-mail incorrecto" pattern=" ^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                    <input type="text" name="subject" placeholder="Asunto" title="El asunto es requerido" required>
+                    <textarea name="coments" id="" cols="50" rows="5" placeholder="Escribe tus comentarios" title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+                    <input type="submit">
+                     
+                    <div class="contact-form-loader none">
+                        <img src="./assets/puff.svg" alt="cargando">
+                    </div>
+                    <div class="contact-form-response none">
+                        <p>Los datos han sido enviados</p>
+                    </div>
+                </form>
+            </section>
+            <section id="seccion15" class="section" data-scroll-spy>
+                <h2>seccion 15</h2>
             </section>
           </main>
           <button class="scroll-top-button hidden">&#11014;</button>
